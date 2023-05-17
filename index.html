@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>méthodes d'écritures javascript</title>
-    </head>
-    <body>
-        
-        <h1>Hello</h1>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>méthodes d'écritures javascript</title>
+    <style>
+        .citation{
+            font-style:italic;
+            color: rgb(160, 71, 71);
+        }
+        .fondVert{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">DOM HTML</h1>
+    <p class="fondVert ">
+        chapitre1: Lorem ipsum, dolor sit amet consectetur adipisicing elit. <strong>Texte en gras</strong> Quidem vel, quisquam deserunt quaerat nobis
+        doloremque eius vero voluptate. Tenetur, distinctio aliquid facere cum illum tempore non dolore sequi vitae quo?
+        <span class="citation">
+            citation1: Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Vel, provident!
+        </span>
+    </p>
+    <p>
+        chapitre2: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem vel, quisquam deserunt quaerat nobis
+        doloremque eius vero voluptate. Tenetur, distinctio aliquid facere cum illum tempore non dolore sequi vitae quo?
+        <span class="citation">
+            citation2: Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Vel, provident!
+        </span>
+    </p>
+        <ul>
+            <li>Fraises</li>
+            <li>Pommes</li>
+            <li>Poires</li>
+            <li>Bananes</li>
+            <li>Kiwis</li>
+            <li>Raisin</li>
+        </ul>
+        <a href="https://www.google.com">Cliquez ici</a>
+        <a href="index2.html">index2</a>
+    
 
 
+<!----------------JAVASCRIPT------------>
+    <script>
+        console.log(window);
+        console.log(document);
 
-        <script src="app.js"></script>
-    </body>
+
+//selectionner par son ID
+let title= document.getElementById("title");
+
+//Recupere uniquement le texte
+console.log(title.innerText)
+//Recupere uniquement le HTML
+console.log(title.innerHTML)
+
+//modifier le contenu text
+title.innerText = "<em>Nouveau</em> Titre";
+//modifier le contenu HTML
+ title.innerHTML = "<em>Nouveau</em> Titre";
+
+ //selectionner par leur class
+let citation= document.getElementsByClassName("citation");
+console.log(citation)//tableau
+console.log(citation[1])//tableau à l'index 1
+
+//selectionner par leurs balises
+let paragraphe = document.getElementsByTagName("p")
+console.log(paragraphe); //tableau
+console.log(paragraphe[1].innerText)//contenu text du 2eme paragraphe
+
+//selectionner avec des selecteurs CSS
+console.log(document.querySelector(".citation"))
+console.log(document.querySelectorAll(".citation"))
+
+//Recuperer des attibuts HTML
+let a = document.querySelector("a")
+console.log(a.getAttribute("href"))
+a.setAttribute("href", 'https://www.weformyou.fr')
+
+//modifier le style CSS
+ document.querySelector("p").style.backgroundColor="#aaa";
+
+//ajouter une class CSS a un element HTML
+ console.log(document.querySelector("p").classList.add("fondVert"));
+
+//supprimer class CSS d'un element HTML
+console.log(document.querySelector("p").classList.remove("fondVert"));
+
+//selectionner les elements pair
+let tabLi = document.querySelectorAll("ul li:nth-child(even)");
+console.log(tabLi);
+for(let li of tabLi){
+    li.classList.add("fondVert");
+}
+
+//tester la presence d'une CSS sur un element HTML
+if(document.querySelector("li:nth-child(2)").classList.contains("fondVert"))
+{
+    console.log("la classe verte est affectée")
+}
+
+//Echanger la presence d'une class CSS a un element HTML
+//console.log(document.querySelector("p").classList.toggle("fondVert"));
+
+//Deplacer des elements HTML
+document.querySelector("p").appendChild(document.querySelector("h1"));
+  
+    </script>
+</body>
+
 </html>

@@ -143,13 +143,14 @@ console.log(b);
 //  };
 //  somme(10, 2);
 
+
+
  //boucles
  for (let i =0; i < 3; i++){
      console.log("boucle: " + i)
  };
 
  // parcourir un tableau
-
 let tabl = ["orange", "mangue", "ananas"]
 console.log("---For---")
 for( let i = 0; i < tabl.length; i+=1){
@@ -187,23 +188,80 @@ do{
 
 
 //Questionnaire interactif
-let question1 = prompt("A quel compositeur est consacré le film Amadeus ?\n1. Beethoven\n2. Mozart")
-if( ){
 
-    alert( "bonne réponse")
- } else {
-   alert( "mauvaise reponse")
- }; 
 
- let question2 = prompt("Quelle la capitale de l'Autriche ?\n1. Vienne\n2. Oslo")
-if( ){
-    alert( "bonne réponse")
-} else {
-    alert( "mauvaise reponse")
-  };
- let question3 = prompt("Quel organe est pertubé par les acouphènes ?\n1. Les Pieds\n2. Les Oreilles")
-if( ){
-    alert( "bonne réponse")
-} else {
-    alert( "mauvaise reponse")
-  };
+ //mon questionnaire
+
+//  let question1 = prompt("A quel compositeur est consacré le film Amadeus ?\n1. Beethoven\n2. Mozart")
+
+//  if( question1 == 2){
+   
+//          alert ("Bonne réponse")
+//      }
+//      else{
+//          alert ("Mauvaise réponse")
+//      };
+  
+//   let question2 = prompt("Quelle la capitale de l'Autriche ?\n1. Vienne\n2. Oslo")
+
+//   if( question2 == 1){
+   
+//       alert ("Bonne réponse")
+//   }
+//   else{
+//       alert ("Mauvaise réponse")
+//   };
+//   let question3 = prompt("Quel organe est pertubé par les acouphènes ?\n1. Les Pieds\n2. Les Oreilles")
+
+//   if( question3 == 2){
+   
+//       alert ("Bonne réponse")
+//   }
+//   else{
+//       alert ("Mauvaise réponse")
+//   };
+
+
+
+
+ //correction de la vidéo
+
+  const questions = [
+     {
+         question:
+         "A quel compositeur est consacré le film Amadeus ?\n1. Beethoven\n2. Mozart",
+         reponse: 2
+     },
+     {
+         question:
+         "Quelle la capitale de l'Autriche ?\n1. Vienne\n2. Oslo",
+         reponse: 1
+     },
+     {
+         question:
+         "Quel organe est pertubé par les acouphènes ?\n1. Les Pieds\n2. Les Oreilles",
+         reponse: 2
+     }
+  ]
+// //  /***************Debut du jeu*********/
+//   let nbBonneReponse = 0;
+
+//   for(let i = 0; i < questions.length; i += 1){
+//      let repUser = prompt(questions[i].question);
+//      if( repUser == questions[i].reponse){
+//          alert("Reponse Bonne")
+//          nbBonneReponse += 1;
+//      }else{
+//          alert("Reponse Fausse");
+//      }
+//   }
+//   if(nbBonneReponse <= 1){
+//      alert(`vous avez ${nbBonneReponse} Bonne reponse sur ${questions.length}`)
+//   }else{
+//   alert(`vous avez ${nbBonneReponse} Bonnes reponses sur ${questions.length}`)
+//   }
+
+
+  
+
+
