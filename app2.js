@@ -50,7 +50,7 @@
 //         //on reactive la div voulu
 //         document.querySelector("#tab" + num).classList.add("active");
 
-    
+
 //     });
 // }
 
@@ -128,7 +128,7 @@
 //             images[imgActive].classList.add("show");
 //         },100)
 //     }
-    
+
 // //fonction précédente
 // const prev = function (){
 //     images[imgActive].classList.add("hidden");
@@ -137,7 +137,7 @@
 //     if(imgActive <= 0){
 //         imgActive = images.length - 1;
 //     }
-    
+
 //     images[imgActive].classList.remove("hidden");
 //     setTimeout(()=>{
 //         images[imgActive].classList.add("show");
@@ -152,54 +152,71 @@
 //     if( e.key == "ArrowLeft"){
 //         prev()
 //     }
-    
+
 // })
 //création de la promesse
-const promiseGetUsers = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        if(typeof USERS !== "undefined"){
-            resolve(USERS)
-        }else{
-            reject("Accés aux users impossible")
-        }
-    },2000)
-})
-//recuperer l'etat de la promesse
+// const promiseGetUsers = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         if(typeof USERS !== "undefined"){
+//             resolve(USERS)
+//         }else{
+//             reject("Accés aux users impossible")
+//         }
+//     },2000)
+// })
+// //recuperer l'etat de la promesse
 
-promiseGetUsers
-.then(function(u){
-    let liste =`<ul>`
-    for(let user of u){
-        liste += `<li>${user.name}</li>`;
-    }
-    liste += `</ul>`
-    document.querySelector("#users").innerHTML =liste
+// promiseGetUsers
+// .then(function(u){
+//     let liste =`<ul>`
+//     for(let user of u){
+//         liste += `<li>${user.name}</li>`;
+//     }
+//     liste += `</ul>`
+//     document.querySelector("#users").innerHTML =liste
 
-})
-.catch(function(e){
-    console.log(e);
-})
-//****************NEWS**************/
-//création de la promesse
-const promiseGetNews = new Promise((resolve, reject) =>{
-    setTimeout(function(){
-        if(typeof NEWS !== "undefined"){
-            resolve(NEWS)
-        }else{
-            reject("Accés aux news impossible")
-        }
-    },2000)
-})
-//recuperer l'etat de la promesse
+// })
+// .catch(function(e){
+//     console.log(e);
+// })
+// //****************NEWS**************/
+// //création de la promesse
+// const promiseGetNews = new Promise((resolve, reject) =>{
+//     setTimeout(function(){
+//         if(typeof NEWS !== "undefined"){
+//             resolve(NEWS)
+//         }else{
+//             reject("Accés aux news impossible")
+//         }
+//     },2000)
+// })
+// //recuperer l'etat de la promesse
 
-promiseGetNews
-.then((n) =>{
-    let liste =`<ul>`
-    for(let actu of n){
-        liste += `<li>${actu.title}</li>`;
-    }
-    liste += `</ul>`
-    document.querySelector("#news").innerHTML =liste
+// promiseGetNews
+// .then((n) =>{
+//     let liste =`<ul>`
+//     for(let actu of n){
+//         liste += `<li>${actu.title}</li>`;
+//     }
+//     liste += `</ul>`
+//     document.querySelector("#news").innerHTML =liste
 
-})
-.catch((e) => console.log(e));
+// })
+// .catch((e) => console.log(e));
+// document.querySelector("#cp").addEventListener("input", function () {
+//     if (this.value.length == 5) {
+//         let url =
+//             `https://geo.api.gouv.fr/communes?codePostal=${this.value}&fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre`;
+//         fetch(url).then((response) =>
+//             response.json().then((data) => {
+//                 console.log(data);
+//                 let affichage = '<ul>';
+//                 for (let ville of data) {
+//                     affichage += `<li><strong>${ville.nom}</strong> - ${ville.population}habitants</li>`
+//                 }
+//                 affichage += "</ul>";
+//                 document.querySelector("#villes").innerHTML = affichage
+//             })
+//         ).catch(err => console.log("erreur :" + err))
+//     }
+// });

@@ -127,13 +127,13 @@
 //  message();
 //  console.log(texte)
 //  const messages = function(textes){
-   
+
 //      alert(textes);
 //  }
 //  messages("je suis le texte en paramètre");
 
 //  const Messages = function(Textes = "texte par defaut"){
-   
+
 //      alert(Textes);
 //  }
 //  messages();
@@ -145,12 +145,12 @@
 
 
 
- //boucles
+//boucles
 //  for (let i =0; i < 3; i++){
 //      console.log("boucle: " + i)
 //  };
 
- // parcourir un tableau
+// parcourir un tableau
 // let tabl = ["orange", "mangue", "ananas"]
 // console.log("---For---")
 // for( let i = 0; i < tabl.length; i+=1){
@@ -190,22 +190,22 @@
 //Questionnaire interactif
 
 
- //mon questionnaire
+//mon questionnaire
 
 //  let question1 = prompt("A quel compositeur est consacré le film Amadeus ?\n1. Beethoven\n2. Mozart")
 
 //  if( question1 == 2){
-   
+
 //          alert ("Bonne réponse")
 //      }
 //      else{
 //          alert ("Mauvaise réponse")
 //      };
-  
+
 //   let question2 = prompt("Quelle la capitale de l'Autriche ?\n1. Vienne\n2. Oslo")
 
 //   if( question2 == 1){
-   
+
 //       alert ("Bonne réponse")
 //   }
 //   else{
@@ -214,7 +214,7 @@
 //   let question3 = prompt("Quel organe est pertubé par les acouphènes ?\n1. Les Pieds\n2. Les Oreilles")
 
 //   if( question3 == 2){
-   
+
 //       alert ("Bonne réponse")
 //   }
 //   else{
@@ -224,7 +224,7 @@
 
 
 
- //correction de la vidéo
+//correction de la vidéo
 
 //   const questions = [
 //      {
@@ -262,15 +262,16 @@
 //   }
 
 
-const USERS = [
-    {id: 1, name:"Toto"},
-    {id: 2, name:"Tata"},
-    {id: 2, name:"Tutu"}
-];
-const NEWS = [
-    {id: 1, title:"Actu 1"},
-    {id: 2, title:"Actu 2"},
-    {id: 2, title:"Actu 3"}
-];
+// const USERS = [
+//     {id: 1, name:"Toto"},
+//     {id: 2, name:"Tata"},
+//     {id: 2, name:"Tutu"}
+// ];
+// const NEWS = [
+//     {id: 1, title:"Actu 1"},
+//     {id: 2, title:"Actu 2"},
+//     {id: 2, title:"Actu 3"}
+// ];
+
 
 
