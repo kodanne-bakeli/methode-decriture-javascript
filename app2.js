@@ -87,6 +87,8 @@
 // document.querySelector("#horloge").innerText = affichage
 // }
 // setInterval(horloge,1000)
+
+
 // const images = document.querySelectorAll("#galerie img");
 // let imgActive = 0;
 // images[imgActive].classList.add("show");
@@ -203,6 +205,8 @@
 
 // })
 // .catch((e) => console.log(e));
+
+
 // document.querySelector("#cp").addEventListener("input", function () {
 //     if (this.value.length == 5) {
 //         let url =
@@ -220,3 +224,88 @@
 //         ).catch(err => console.log("erreur :" + err))
 //     }
 // });
+// let form = document.querySelector("#loginForm")
+
+//  //Ecouter la modification de l'email
+//  form.email.addEventListener("change", function(){
+//     validEmail(this)
+//  })
+//  //Ecouter la modification du password
+//  form.password.addEventListener("change", function(){
+//     validPassword(this)
+//  })
+//  //Ecouter la soumission du formulaire
+//  form.addEventListener("submit", function(e){
+//     e.preventDefault();
+//     if(validEmail(form.email) && validPassword(form.password)){
+//         form.submit();
+//     }
+    
+//  })
+//  //*************validatyion EMAIL*********/
+//  const validEmail = function(inputEmail){
+//     //création de la reg exp pour la validation email
+//     let emailRegExp = new RegExp(
+//         "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$", "g"
+//     );
+//     //recupération de la balise small
+//     let small = inputEmail.nextElementSibling
+// //on test l'expression reguliere
+
+//  if(emailRegExp.test(inputEmail.value)){
+//     small.innerHTML = "Adresse valide";
+//     small.classList.remove("text-danger");
+//     small.classList.add("text-success");
+//     return true
+//  }else{
+//     small.innerHTML = "Adresse non valide";
+//     small.classList.remove("text-success");
+//     small.classList.add("text-danger");
+//     return false
+//     }
+//   };
+//   //*************validatyion PASSWORD*********/
+//  const validPassword = function(inputPassword){
+//     let msg;
+//     let valid = false
+// //Au moins 3 caractéres
+// if(inputPassword.value.length < 3){
+//     msg = "le mot de passe doit contenir au moins 3 caractères";
+// }
+// //Au moins 1maj
+// else if(!/[A-Z]/.test(inputPassword.value)){
+//     msg = "le mot de passe doit contenir au moins 1 majuscule";
+// }
+// //Au moins 1min
+// else if(!/[a-z]/.test(inputPassword.value)){
+//     msg = "le mot de passe doit contenir au moins 1 miniscule";
+// }
+// //Au moins 1chiffre
+// else if(!/[0-9]/.test(inputPassword.value)){
+//     msg = "le mot de passe doit contenir au moins 1 chiffre";
+// }
+// //mot de passe valide
+// else{
+//     msg = "le mot de passe est valide";
+//     valid = true
+// }
+// //affichage
+//     //recupération de la balise small
+//     let small = inputPassword.nextElementSibling
+// //on test l'expression reguliere
+
+//  if(valid){
+//     small.innerHTML = msg;
+//     small.classList.remove("text-danger");
+//     small.classList.add("text-success");
+//     return true
+//  }else{
+//     small.innerHTML = msg;
+//     small.classList.remove("text-success");
+//     small.classList.add("text-danger");
+//     return false
+//     }
+//  };
+
+
+
